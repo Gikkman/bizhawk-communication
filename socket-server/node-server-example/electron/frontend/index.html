@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>Example app</title>
+
+      <style src="./style.css"></style>
+
+      <!-- Hack to make ES6 modules work on renderer process -->
+      <script> var exports = {}; </script>  
+
+   </head> 
+   <body>
+      <div id="buttons">
+         <button type="button" onclick="sendMute()">Mute</button>
+         <button type="button" onclick="sendUnmute()">Unmute</button>
+      </div>
+   </body> 
+   <script src="./script.js"> </script>
+</html>

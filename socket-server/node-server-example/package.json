@@ -1,0 +1,30 @@
+{
+  "name": "bizhawk-helper",
+  "version": "1.0.0",
+  "repository": "https://github.com/Gikkman/bizhawk-communication",
+  "description": "Helper program to demonstrate Bizhawk communication",
+  "author": {
+    "name": "Gikkman",
+    "url": "http://www.github.com/gikkman"
+  },
+  "main": "_compile/Main.js",
+  "scripts": {
+    "prestart": "npm run compile",
+    "start": "electron .",
+    "compile": "tsc && tscpaths -p tsconfig.json -s ./electron -o ./_compile",
+    "postcompile": "copyfiles -u 1 electron/**/*.html electron/**/*.css _compile/"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "electron-log": "^3.0.5"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "electron": "^5.0.1",
+    "tscpaths": "0.0.9",
+    "typescript": "^3.4.5",
+    "@types/express": "^4.17.0"
+  }
+}
