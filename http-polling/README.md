@@ -6,11 +6,15 @@ Typically, I've found this solution works well when the server program runs on t
 
 ### Benefits
 * Easy to use with standard solutions
-* Bizhawk can ask server for instructions as reactions on events
 
 ### Drawbacks
 * Higher performance overhead
 * Might hang if the server stops responding or respons slow
+* Requires custom command-line parameters when launching Bizhawk
+
+# Setup
+
+To get the HTTP interface to work, you need to enable it via a command-line parameter when Bizhawk starts. Create a shortcut pointing to the EmuHawk executable, then add `--url_get=localhost` into the `Target:` field (where it should say `C:\path\to\EmuHawk.exe`). The key here is that the command-line parameter has to be set, it doesn't really matter what it is.
 
 # Example
 

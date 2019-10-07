@@ -1,8 +1,8 @@
 # Socket Servier
 
-This implementation will open a socket in Bizhawk which can connect to a server, that will then send messages. 
+This implementation will open a socket server in Bizhawk which another program can connect to, and then send messages. 
 
-Typically, I've found this solution works better when the server runs remotely and communication has to use the internet.
+Typically, I've found this solution works when the two programs run on the same machine, and the Bizhawk instance never initiates communication. 
 
 ### Benefits
 * Messages arrive at once
@@ -27,4 +27,4 @@ To run this example, open a terminal and navigate to the `node-server-example` f
 * `npm i`
 * `npm run start`
 
-This will start a small server with a window application. Then, launch bizhawk, start a game and drag the `lua-socket.lua` to the game window. This will open a lua console window, running the lua script. Now, press the mute or unmute buttons, and see how the game gets muted or unmuted. 
+This will start a small server with a window application. Then, launch bizhawk, start a game and drag the `lua-socket-server.lua` to the game window. This will open a lua console window, running the lua script. Now, press the mute or unmute buttons, and see how the game gets muted or unmuted. 
