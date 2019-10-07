@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "type": "node",
+            "name": "Launch example",
+            "program": "${workspaceRoot}\\${input:project}\\node-server-example\\electron\\Main.ts",
+            "stopOnEntry": false,
+            "outFiles": ["${workspaceRoot}\\${input:project}\\node-server-example\\_compile\\**\\*.js"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}\\${input:project}\\node-server-example",
+            "runtimeExecutable": "${workspaceRoot}\\${input:project}\\node-server-example\\node_modules\\.bin\\electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}\\${input:project}\\node-server-example\\node_modules\\.bin\\electron.cmd"
+            },
+            "args" : [],
+            "console": "internalConsole",
+            "outputCapture": "std",
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "project",
+            "description": "Which project to launch?",
+            "options": [
+                "socket-client",
+                "socket-server",
+                "http-polling"
+            ],
+            "default": "http-polling"
+        }
+    ]
+}
